@@ -78,16 +78,16 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
         alertaError.textContent =
-          "* Por favor revisa tu correo y contraseña. Los campos son sensibles a mayúsculas y minúsculas.        !";
+          "* Por favor revisa tu correo y contraseña. Los campos son sensibles a mayúsculas y minúsculas.!";
         formulario.appendChild(alertaError);
+
+        inputpassword.value = "";
+        comprobarFormulario();
 
         setTimeout(() => {
           alertaError.remove();
           //reset input password
-          inputpassword.value = "";
         }, 3000);
-
-        comprobarFormulario();
       }, 2000);
     }
   });
